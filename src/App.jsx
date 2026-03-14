@@ -12,6 +12,7 @@ const [count , setCount] = useState(0);
     <div>
           <h1 style={{color:"blue"}}>Count : {count}</h1>
           <button style={{padding:"10px"}} onClick={() => setCount (count + 1)}>increment</button>
+          <button style={{padding:"10px"}} onClick={() => setCount(count-1)}>Dicrebment</button>
           
           
     </div>
