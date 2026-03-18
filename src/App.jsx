@@ -1,21 +1,17 @@
 import React from 'react'
-import { useState,useEffect } from 'react'
+import { Link, Route, Routes } from 'react-router-dom'
+import Home from "./home"
+
 function App() {
-
-// const state = useState(0);
-// const count =state[0];
-// const setCount = state[1];
-
-const [count , setCount] = useState(0);
-
   return (
     <div>
-          <h1 style={{color:"blue"}}>Count : {count}</h1>
-          <button style={{padding:"10px"}} onClick={() => setCount (count + 1)}>increment</button>
-          <button style={{padding:"10px"}} onClick={() => setCount(count-1)}>Dicrebment</button>
-          
-          
-    </div>
+    <h1 className='text-3xl font-bold underline text-center mt-10'>Hello, React!</h1>
+      <Routes>
+        <Route path='/home' element={<Home />} />
+      </Routes>
+      <Link to="/home" className='text-blue-500 underline'>Go to Home</Link>
+      <h1 className='text-3xl font-bold underline text-center mt-10'>Welcome to App Page</h1> 
+    </div>  
   )
 }
 
